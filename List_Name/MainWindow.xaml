@@ -1,0 +1,30 @@
+﻿<Window x:Class="List_Name.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:List_Name"
+        mc:Ignorable="d"
+        Title="Приложение - имена" Height="300" Width="500"
+        Background="Black">
+    <Grid Margin="10" Background="AntiqueWhite">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="1" FontSize="20">Введите имя</Label>
+        <ListBox Grid.Row="1" x:Name="lstNames" />
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
+            <TextBox x:Name="txtName" />
+            <Button x:Name="btnAdd" Margin="0,5,0,0" Click="ButtonAddName_Click">Добавить Имя</Button>
+        </StackPanel>
+    </Grid>
+</Window>
