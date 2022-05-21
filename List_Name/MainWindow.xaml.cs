@@ -42,5 +42,25 @@ namespace List_Name
                 MessageBox.Show("Пробелы недопустимы в имени");
             }
         }
+
+        private void ButtonSortList_Click(object sender, RoutedEventArgs e)
+        {
+            List<string> list = new List<string>();
+            foreach (var Item in lstNames.Items)
+            {
+                list.Add(Item.ToString());
+            }
+
+            list.Sort();
+
+            lstNames.Items.Clear();
+
+            foreach (var Item in list)
+            {
+                lstNames.Items.Add(Item);
+            }
+        }
     }
 }
+
+
