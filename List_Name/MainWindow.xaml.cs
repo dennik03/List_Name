@@ -36,7 +36,46 @@ namespace List_Name
                 txtName.Clear();
             }
         }
-        private void BtRainbow_Click(object sender, RoutedEventArgs e)
+       
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       private void BtRainbow_Click(object sender, RoutedEventArgs e)
         {
             this.Background = new SolidColorBrush(RainbowList[CurrentColorId]);
             CurrentColorId++;
