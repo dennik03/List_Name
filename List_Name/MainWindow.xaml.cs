@@ -20,11 +20,14 @@ namespace List_Name
     /// </summary>
     public partial class MainWindow : Window
     {
+        int CurrentColorId = 0;
+        List<Color> RainbowList = new List<Color>() 
+        { Colors.Red,Colors.Orange,Colors.Yellow,Colors.Green,Colors.LightSkyBlue,Colors.Blue,Colors.BlueViolet};
         public MainWindow()
         {
             InitializeComponent();
+           
         }
-
         private void ButtonAddName_Click(object sender, RoutedEventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtName.Text) && !lstNames.Items.Contains(txtName.Text))
@@ -32,6 +35,12 @@ namespace List_Name
                 lstNames.Items.Add(txtName.Text);
                 txtName.Clear();
             }
+        }
+        private void BtRainbow_Click(object sender, RoutedEventArgs e)
+        {
+            this.Background = new SolidColorBrush(RainbowList[CurrentColorId]);
+            CurrentColorId++;
+            if (CurrentColorId == 7) CurrentColorId = 0;
         }
     }
 }

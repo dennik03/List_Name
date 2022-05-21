@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:List_Name"
         mc:Ignorable="d"
         Title="Приложение - имена" Height="300" Width="500"
-        Background="Black">
+        Background="Black"
+        Icon="Resources/icon.png">
+        
     <Grid Margin="10" Background="AntiqueWhite">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -26,5 +28,6 @@
             <TextBox x:Name="txtName" />
             <Button x:Name="btnAdd" Margin="0,5,0,0" Click="ButtonAddName_Click">Добавить Имя</Button>
         </StackPanel>
+        <Button x:Name="BtRainbow" Click="BtRainbow_Click" Grid.Column="1" VerticalAlignment="Center" HorizontalContentAlignment="Center" Margin="5" Grid.Row="1">Жать чтобы радуга</Button>
     </Grid>
 </Window>
