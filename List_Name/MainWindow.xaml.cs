@@ -33,5 +33,14 @@ namespace List_Name
                 txtName.Clear();
             }
         }
+
+        private void TextBox_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                e.Handled = true;
+                MessageBox.Show("Пробелы недопустимы в имени");
+            }
+        }
     }
 }
