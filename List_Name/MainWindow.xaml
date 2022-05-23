@@ -6,8 +6,9 @@
         xmlns:local="clr-namespace:List_Name"
         mc:Ignorable="d"
         Title="Приложение - имена" Height="325" Width="500"
-        Background="Black">
+        Background="Black"
         Icon="Resources/icon.png">
+    
     <Grid Margin="10" Background="AntiqueWhite">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>

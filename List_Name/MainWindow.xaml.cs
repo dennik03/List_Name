@@ -75,6 +75,8 @@ namespace List_Name
         {
             SaveFileDialog saving = new SaveFileDialog();
 
+            saving.Filter = "Text file (*.txt)|*.txt";
+
             saving.ShowDialog();
 
             string textout = "";
@@ -87,6 +89,7 @@ namespace List_Name
             File.WriteAllText(saving.FileName, textout);
 
             MessageBox.Show("Успешно сохранено!");
+        }
         private void BtRainbow_Click(object sender, RoutedEventArgs e)
         {
             this.Background = new SolidColorBrush(RainbowList[CurrentColorId]);
