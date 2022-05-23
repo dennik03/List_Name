@@ -32,9 +32,16 @@ namespace List_Name
 
         private void ButtonAddName_Click(object sender, RoutedEventArgs e)
         {
+            string name = txtName.Text.ToLower();
+            string nameTxt = name[0].ToString().ToUpper();
+            for (int i = 1; i < name.Length; i++)
+            {
+                nameTxt += name[i];
+            }
+
             if (!string.IsNullOrWhiteSpace(txtName.Text) && !lstNames.Items.Contains(txtName.Text))
             {
-                lstNames.Items.Add(txtName.Text);
+                lstNames.Items.Add(nameTxt);
                 txtName.Clear();
             }
         }
