@@ -67,6 +67,8 @@ namespace List_Name
         {
             SaveFileDialog saving = new SaveFileDialog();
 
+            saving.Filter = "Text file (*.txt)|*.txt";
+
             saving.ShowDialog();
 
             string textout = "";
