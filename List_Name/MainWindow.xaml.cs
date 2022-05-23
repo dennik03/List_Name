@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -69,6 +71,22 @@ namespace List_Name
                 lstNames.Items.Add(Item);
             }
         }
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saving = new SaveFileDialog();
+
+            saving.ShowDialog();
+
+            string textout = "";
+
+            foreach (string li in lstNames.Items)
+            {
+                textout = textout + li + Environment.NewLine;
+            }
+
+            File.WriteAllText(saving.FileName, textout);
+
+            MessageBox.Show("Успешно сохранено!");
         private void BtRainbow_Click(object sender, RoutedEventArgs e)
         {
             this.Background = new SolidColorBrush(RainbowList[CurrentColorId]);
