@@ -28,7 +28,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
-            <TextBox PreviewKeyDown="TextBox_PreviewKeyDown" x:Name="txtName" />
+            <TextBox PreviewKeyDown="TextBox_PreviewKeyDown" x:Name="txtName" MaxLength="8" />
             <Button x:Name="btnAdd" Margin="0,5,0,0" Click="ButtonAddName_Click">Добавить Имя</Button>
             <Button x:Name="btnSort" Margin="0,5,0,0" Click="ButtonSortList_Click">Отсортировать</Button>
             <Button x:Name="BtRainbow" Click="BtRainbow_Click"  Margin="0,5,0,0">Жать чтобы радуга</Button>
