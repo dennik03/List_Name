@@ -8,11 +8,11 @@
         Title="Приложение - имена" Height="425" Width="600"
         Background="Black"
         Icon="Resources/icon.png">
-    
+
     <Grid Margin="10" Background="AntiqueWhite">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto" MinHeight="46"></RowDefinition>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
 
@@ -21,7 +21,7 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Column="1" FontSize="20">Введите имя</Label>
+        <Label Grid.Column="1" FontSize="20" Margin="0,0,0,3">Введите имя</Label>
         <StackPanel Grid.Row="1">
             <ListBox Height="200" x:Name="lstNames"/>
             <Button x:Name="btnSave" Click="btnSave_Click" Content="Сохранить файл" Margin="0 5 0 0"></Button>
