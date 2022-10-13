@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:List_Name"
         mc:Ignorable="d"
-        Title="Приложение - имена" Height="300" Width="500"
-        Background="Black">
+        Title="Приложение - имена" Height="425" Width="600"
+        Background="Black"
+        Icon="Resources/icon.png">
 
     <Grid Margin="10" Background="AntiqueWhite">
         <Grid.RowDefinitions>
@@ -20,14 +21,17 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Column="1" FontSize="20">Введите имя</Label>
-        <ListBox Grid.Row="1" x:Name="lstNames" />
+        <Label Grid.Column="1" FontSize="20" Margin="0,0,0,3">Введите имя</Label>
+        <StackPanel Grid.Row="1">
+            <ListBox Height="200" x:Name="lstNames"/>
+            <Button x:Name="btnSave" Click="btnSave_Click" Content="Сохранить файл" Margin="0 5 0 0"></Button>
+        </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
-            <TextBox  x:Name="txtName" MaxLength="8" />
+            <TextBox PreviewKeyDown="TextBox_PreviewKeyDown" x:Name="txtName" MaxLength="8" />
             <Button x:Name="btnAdd" Margin="0,5,0,0" Click="ButtonAddName_Click">Добавить Имя</Button>
-            <Button x:Name="btnSort" Margin="0,5,0,0" Click="ButtonSortList_Click">Сортировка по алфавиту</Button>
-           
+            <Button x:Name="btnSort" Margin="0,5,0,0" Click="ButtonSortList_Click">Отсортировать</Button>
+            <Button x:Name="BtRainbow" Click="BtRainbow_Click"  Margin="0,5,0,0">Жать чтобы радуга</Button>
         </StackPanel>
     </Grid>
 </Window>
